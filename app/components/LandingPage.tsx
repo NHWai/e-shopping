@@ -1,48 +1,27 @@
 import Image from "next/image";
 import React from "react";
 import heroimg from "../../public/hero.jpg";
-import Link from "next/link";
-import leftarrow from "../../public/leftarrow.svg";
+import HeroTextBox from "./HeroTextBox";
+import Carousel from "./Carousel";
 
 const LandingPage = () => {
   return (
-    <div className="relative h-[88vh] w-full overflow-hidden">
-      <Image
-        src={heroimg}
-        // width: "auto"' or 'height: "auto"'
-        style={{
-          width: "100%",
-          height: "100%",
-          objectFit: "cover",
-        }}
-        placeholder="blur"
-        alt="hero-img"
-      />
-      <div className="absolute left-2/4 top-2/4 w-11/12 -translate-x-2/4 -translate-y-2/4 text-center ">
-        <h1 className="text-lightone mb-2 text-3xl font-bold">
-          Welcome to Our Online Store us
-        </h1>
-        <Link
-          href="/card"
-          className="text-lighttwo border-lighttwo mx-auto flex w-fit justify-center border p-2"
-        >
-          Shop Now{" "}
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            strokeWidth="1.5"
-            stroke="currentColor"
-            className="h-6 w-6"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3"
-            />
-          </svg>
-        </Link>
-      </div>
+    <div className="relative h-screen w-full overflow-hidden">
+      <Carousel>
+        <div>
+          <img src="https://images.unsplash.com/photo-1674568295016-7bead30f9056?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDkxfFM0TUtMQXNCQjc0fHxlbnwwfHx8fHw%3D&auto=format&fit=crop&w=600&q=60" />
+        </div>
+        <div>
+          <img src="https://images.unsplash.com/photo-1695931845087-c8803d4e1c07?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDM0fFM0TUtMQXNCQjc0fHxlbnwwfHx8fHw%3D&auto=format&fit=crop&w=600&q=60" />
+        </div>
+        <div>
+          <img src="https://images.unsplash.com/photo-1695753723777-505c5408b6b3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDMzfFM0TUtMQXNCQjc0fHxlbnwwfHx8fHw%3D&auto=format&fit=crop&w=600&q=60" />
+        </div>
+        <div>
+          <img src="https://images.unsplash.com/photo-1694631031738-0e857f3e872a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDY1fFM0TUtMQXNCQjc0fHxlbnwwfHx8fHw%3D&auto=format&fit=crop&w=600&q=60" />
+        </div>
+      </Carousel>
+      <HeroTextBox />
     </div>
   );
 };

@@ -19,9 +19,7 @@ export default function RootLayout({
   return (
     <AppContextProvider>
       <html lang="en">
-        <body
-          className={`${inter.className} bg-bgone text-lighttwo  min-h-screen pb-10 `}
-        >
+        <body className={`${inter.className} min-h-scree relative `}>
           <Navbar />
           {children}
         </body>

@@ -20,6 +20,22 @@
   }
 }
 
+.slick-slide img {
+  height: 100vh;
+  width: 100%;
+  object-fit: cover;
+}
+/*
+.slick-prev {
+  z-index: 100;
+  left: 20px !important;
+}
+.slick-next {
+  z-index: 100;
+  right: 20px !important;
+}
+*/
+
 /*
  body {
   color: rgb(var(--foreground-rgb));
