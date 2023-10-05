@@ -23,8 +23,10 @@ const Navbar = () => {
 
   return (
     <div
-      className={`fixed left-1/2 top-0 z-50   w-full max-w-[1280px] -translate-x-1/2  ${
-        navbarDark ? "bg-black" : "bg-transparent"
+      className={` top-0 z-50  w-full max-w-[1280px]   ${
+        navbarDark
+          ? "sticky left-0  bg-black"
+          : "fixed -left-[2%] bg-transparent sm:left-0"
       }  text-white `}
     >
       <div className="mx-auto flex max-w-[1000px] items-center justify-between px-6 py-3">
