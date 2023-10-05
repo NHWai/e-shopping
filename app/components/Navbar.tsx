@@ -1,11 +1,32 @@
-import Image from "next/image";
-import logo from "../../public/nearMe.svg";
-import cart from "../../public/cart.svg";
+"use client";
 import Link from "next/link";
+import { useEffect, useState } from "react";
 
 const Navbar = () => {
+  const [navbarDark, setNavbarDark] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY >= window.innerHeight) {
+        setNavbarDark(true);
+      } else {
+        setNavbarDark(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
-    <div className="fixed left-1/2 top-0 z-10  flex w-full max-w-[1000px] -translate-x-1/2 items-center justify-between bg-transparent px-6 py-3 text-white ">
+    <div
+      className={`fixed left-1/2 top-0 z-50  flex w-full max-w-[1000px] -translate-x-1/2 items-center justify-between ${
+        navbarDark ? "bg-black" : "bg-transparent"
+      } px-6 py-3 text-white `}
+    >
       <div className=" flex items-center gap-2">
         <Link href="/" className="text-lg font-bold">
           PI &Pi;
