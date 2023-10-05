@@ -11,8 +11,8 @@ const TryNew = () => {
   const renderArrows = () => {
     return (
       <div className=" text-white">
-        <div className="absolute bottom-1/2 right-3 z-40">
-          <BtnGlass>
+        <div className="absolute bottom-1/2 right-3 z-40 translate-y-1/2">
+          <div className=" flex h-[100px] cursor-pointer items-center rounded-full bg-gray-700 px-2">
             <svg
               onClick={() => sliderRef.current?.slickNext()}
               xmlns="http://www.w3.org/2000/svg"
@@ -28,7 +28,7 @@ const TryNew = () => {
                 d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"
               />
             </svg>
-          </BtnGlass>
+          </div>
         </div>
       </div>
     );

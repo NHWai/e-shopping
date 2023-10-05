@@ -14,7 +14,7 @@ const Carousel = ({ children }: Props) => {
     return (
       <div className="text-white">
         <div className="absolute bottom-1/2 left-3 z-40">
-          <BtnGlass>
+          <div className="bg-glass flex h-[100px] cursor-pointer items-center bg-gray-300 px-2">
             <svg
               onClick={() => sliderRef.current?.slickPrev()}
               xmlns="http://www.w3.org/2000/svg"
@@ -30,10 +30,10 @@ const Carousel = ({ children }: Props) => {
                 d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18"
               />
             </svg>
-          </BtnGlass>
+          </div>
         </div>
         <div className="absolute bottom-1/2 right-3 z-40">
-          <BtnGlass>
+          <div className="bg-glass flex h-[100px] cursor-pointer items-center bg-gray-300 px-2">
             <svg
               onClick={() => sliderRef.current?.slickNext()}
               xmlns="http://www.w3.org/2000/svg"
@@ -49,7 +49,7 @@ const Carousel = ({ children }: Props) => {
                 d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"
               />
             </svg>
-          </BtnGlass>
+          </div>
         </div>
       </div>
     );
@@ -61,6 +61,9 @@ const Carousel = ({ children }: Props) => {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
+    // autoplay: true,
+    autoplaySpeed: 3000,
+    cssEase: "linear",
   };
 
   return (
