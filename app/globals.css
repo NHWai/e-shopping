@@ -20,11 +20,15 @@
   }
 }
 
-.slick-slide img {
-  height: 100vh;
-  width: 100%;
-  object-fit: cover;
+.slick-dots {
+  z-index: 100;
+  bottom: -20px !important;
 }
+
+.bg-glass {
+  @apply rounded-2xl bg-opacity-20 shadow-lg backdrop-blur-lg backdrop-filter;
+}
+
 /*
 .slick-prev {
   z-index: 100;

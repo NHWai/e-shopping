@@ -6,7 +6,7 @@ interface Props {
 
 const BtnGlass = ({ children }: Props) => {
   return (
-    <div className="mx-auto flex h-full w-fit min-w-[80px] cursor-pointer items-center justify-center rounded-full border border-gray-100 bg-gray-700 bg-opacity-50 bg-clip-padding px-3 py-2 backdrop-blur-md backdrop-filter">
+    <div className="mx-auto flex h-full min-w-[40px]  cursor-pointer items-center justify-center rounded-full  bg-gray-300 bg-opacity-50 bg-clip-padding px-3 py-[6px]  backdrop-blur-md backdrop-filter">
       {children}
     </div>
   );

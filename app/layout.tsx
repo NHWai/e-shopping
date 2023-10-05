@@ -19,7 +19,9 @@ export default function RootLayout({
   return (
     <AppContextProvider>
       <html lang="en">
-        <body className={`${inter.className} min-h-scree relative `}>
+        <body
+          className={`${inter.className} min-h-scree relative overflow-x-hidden`}
+        >
           <Navbar />
           {children}
         </body>

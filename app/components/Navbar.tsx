@@ -5,7 +5,7 @@ import Link from "next/link";
 
 const Navbar = () => {
   return (
-    <div className="fixed left-1/2 top-0 z-10  flex w-full max-w-[1000px] -translate-x-1/2 items-center justify-between border border-red-400 bg-transparent px-2 text-white ">
+    <div className="fixed left-1/2 top-0 z-10  flex w-full max-w-[1000px] -translate-x-1/2 items-center justify-between bg-transparent px-6 py-3 text-white ">
       <div className=" flex items-center gap-2">
         <Link href="/" className="text-lg font-bold">
           PI &Pi;

@@ -8,6 +8,9 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      screens: {
+        xs: "500px", // Define your custom breakpoint here
+      },
       colors: {
         // Configure your color palette here
         bgone: "#04364A",
