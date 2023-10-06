@@ -11,10 +11,12 @@ const TryNew = () => {
   const renderArrows = () => {
     return (
       <div className=" text-white">
-        <div className="absolute bottom-1/2 right-3 z-40 translate-y-1/2">
+        <div
+          onClick={() => sliderRef.current?.slickNext()}
+          className="absolute bottom-1/2 right-3 z-40 translate-y-1/2 "
+        >
           <div className=" flex h-[100px] cursor-pointer items-center rounded-full bg-gray-700 px-2">
             <svg
-              onClick={() => sliderRef.current?.slickNext()}
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 24 24"
@@ -37,14 +39,24 @@ const TryNew = () => {
   const settings = {
     infinite: true,
     speed: 500,
-    slidesToShow: 1.05,
+    slidesToShow: 1,
     slidesToScroll: 1,
     centerMode: true, // Enable center mode
-    centerPadding: "0px", // Padding for center mode
+    centerPadding: "20px", // Padding for center mode
   };
   return (
-    <section className="  mb-12  ml-auto  min-h-[200px] max-w-[1175px] overflow-visible pl-6">
-      <div className="relative">
+    /*{<section className=" mb-12  min-h-[200px] w-full pl-6">
+      <div className="relative h-full w-full overflow-hidden border border-red-500 ">
+        <Slider ref={sliderRef} {...settings}>
+          <TryNewCard bgColor="bg-gray-800" />
+          <TryNewCard bgColor="bg-red-800" />
+          <TryNewCard bgColor="bg-sky-500" />
+          <TryNewCard bgColor="bg-green-500" />
+        </Slider>
+      </div>
+    </section>}*/
+    <section className="  mb-12  min-h-[200px]  w-full  pl-6 lg:ml-auto lg:max-w-[1175px]">
+      <div className="relative  h-full w-full overflow-hidden">
         {renderArrows()}
         <Slider ref={sliderRef} {...settings}>
           <TryNewCard bgColor="bg-gray-800" />

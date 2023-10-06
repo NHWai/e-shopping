@@ -25,7 +25,7 @@ const Navbar = () => {
     <div
       className={` top-0 z-50  w-full max-w-[1280px]   ${
         navbarDark
-          ? "sticky left-0  bg-black"
+          ? "sticky left-0  bg-black "
           : "fixed -left-[2%] bg-transparent sm:left-0"
       }  text-white `}
     >
