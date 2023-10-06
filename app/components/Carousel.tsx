@@ -13,10 +13,12 @@ const Carousel = ({ children }: Props) => {
   const renderArrows = () => {
     return (
       <div className="text-white">
-        <div className="absolute bottom-1/2 left-3 z-40">
+        <div
+          className="absolute bottom-1/2 left-3 z-40"
+          onClick={() => sliderRef.current?.slickPrev()}
+        >
           <div className="bg-glass flex h-[100px] cursor-pointer items-center bg-gray-300 px-2">
             <svg
-              onClick={() => sliderRef.current?.slickPrev()}
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 24 24"
@@ -32,10 +34,12 @@ const Carousel = ({ children }: Props) => {
             </svg>
           </div>
         </div>
-        <div className="absolute bottom-1/2 right-3 z-40">
+        <div
+          className="absolute bottom-1/2 right-3 z-40"
+          onClick={() => sliderRef.current?.slickNext()}
+        >
           <div className="bg-glass flex h-[100px] cursor-pointer items-center bg-gray-300 px-2">
             <svg
-              onClick={() => sliderRef.current?.slickNext()}
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 24 24"

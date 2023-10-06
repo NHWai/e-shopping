@@ -24,10 +24,12 @@ const Category = (props: Props) => {
   const renderArrows = () => {
     return (
       <div className=" text-white">
-        <div className="absolute bottom-1/2 right-3 z-40">
+        <div
+          onClick={() => sliderRef.current?.slickNext()}
+          className="absolute bottom-1/2 right-3 z-40"
+        >
           <div className="bg-glass flex h-[100px] cursor-pointer items-center bg-black px-2">
             <svg
-              onClick={() => sliderRef.current?.slickNext()}
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 24 24"
